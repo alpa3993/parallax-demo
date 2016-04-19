@@ -1,0 +1,208 @@
+@import url(https://fonts.googleapis.com/css?family=Lora|Dosis|Hind);
+@import url(https://fonts.googleapis.com/css?family=Raleway|Open+Sans+Condensed:300|Droid+Serif);
+
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+//sets up page with depth
+.home {
+	perspective: 1px; 
+	transform-style: preserve-3d;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+.slide:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: 50% 50% / cover;
+}
+
+.slide {
+	position: relative;
+	padding: 25vh 10%;
+	min-height: 100vh;
+	width: 100vw;
+	transform-style: inherit;
+	background: 50% 50% / cover;
+}
+
+.slide p,
+.slide figure {
+	position: relative;
+	z-index: 10;
+	background: rgba(255,255,255,0.5);
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0 0 8px rgba (0,0,0,0.7);
+	border-radius: 10px; 
+}
+
+.slide p {
+	transform: translateZ(0.1px) scale(0.8);
+	width: 25%;
+	float: left;
+}
+
+
+#title {
+	background-color: white;
+	background-attachment: fixed;
+}
+
+#slide1:before {
+	background-image: url('../img/kanye-slide-1.png');
+	transform: translateZ(-1px) scale(2);
+	z-index: -1;
+}
+
+#slide2 {
+	background-image: url('../img/kanye-slide-2.png');
+	background-attachment: fixed;
+}
+
+#slide3:before {
+	background-image: url('../img/kanye-slide-3.png');
+	transform: translateZ(-1px) scale(2);
+	z-index: -1;
+}
+
+#slide4 {
+	background-image: url('../img/kanye-slide-4.png');
+	background-attachment: fixed;
+}
+
+h1,
+h2, 
+p
+ {	
+			font-family: 'Droid Serif', serif;
+			color: black;
+			background: rgba(255,255,255,0.7);
+			padding: 30px;
+			text-align: left;
+			box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+			border-radius: 10px;
+		}
+
+.icon {
+	position: absolute;
+	z-index: 1000;
+	right: 530px;
+	top: 425px;
+
+}
+
+/*
+.icon {
+	width: 84px;
+	height: 108px;
+	top:520px;
+	position: absolute;
+	margin: 0 auto;
+	background: url(../img/kanye.png) 0 0 no-repeat;
+	background-size: 100% auto;
+	z-index: 20;
+	-webkit-transform: translate3d(0, 0, 0);
+}	
+*/
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+	font-size: 28px;
+	line-height: 36px;
+	font-family: 'Droid Serif', serif;
+	height: 180px;
+	overflow: hidden;
+}
+
+.visible {
+  font-weight:600;
+  overflow:hidden;
+  height:78px;
+  padding:0 40px;
+  
+  &:before {
+    content:'[';
+    left: 0;
+    line-height:30px;
+  }
+  &:after {
+    content:']';
+    position:absolute;
+    right: 0;
+    line-height:30px;
+  }
+  &:after, &:before {
+    position:absolute;
+    top:0;
+    color:#16a085;
+    font-size:36px;
+    animation:2s linear 0s normal none infinite opacity;
+  }
+}
+
+#titletext {
+  display:inline;
+  float:left;
+  margin:0;
+
+}
+
+ul {
+  margin-top:10;
+  padding-left:325px;
+  text-align:left;
+  list-style:none;
+  animation:6s linear 0s normal none infinite change;
+}
+
+ul li {
+  line-height:32px;
+  margin:10;
+}
+
+@keyframes opacity {
+  0%, 100%   {opacity:0;}
+  50%  {opacity:1;}
+}
+
+@keyframes change {
+  0%, 12%, 100%   {transform:translateY(0);}
+  17%,29%  {transform:translateY(-25%);}
+  34%,46%  {transform:translateY(-50%);}
+  51%,63%  {transform:translateY(-75%);}
+  68%,80%  {transform:translateY(-50%);}
+  85%,97%  {transform:translateY(-25%);}
+}
+
+
+
+
+
+
+
+
+
+
+
